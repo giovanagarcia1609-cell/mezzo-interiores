@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Montserrat", sans-serif;
+  --color-mezzo: #C6A46C;
+  --color-mezzo-dark: #8C6B3E;
+  --color-mezzo-light: #E0C18A;
+  --color-graphite: #1C1A19;
+  --color-darkbrown: #3A2A24;
+  --color-offwhite: #f9f9f7;
+}
+
+@layer base {
+  body {
+    @apply bg-graphite text-white/80 font-sans antialiased font-light;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-white;
+  }
+}
+
+.lux-shadow {
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.glass-effect {
+  background: rgba(28, 26, 25, 0.8);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(198, 164, 108, 0.1);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #8C6B3E 0%, #C6A46C 50%, #E0C18A 100%);
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #E0C18A 0%, #C6A46C 50%, #8C6B3E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border: 1px solid transparent;
+  background-image: linear-gradient(var(--color-graphite), var(--color-graphite)), 
+                    linear-gradient(135deg, #8C6B3E, #E0C18A);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
