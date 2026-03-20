@@ -25,6 +25,14 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+// Utility for asset paths (GitHub Pages compatibility)
+const getAssetPath = (path: string) => {
+  const base = import.meta.env.BASE_URL || '/';
+  // Remove leading slash from path if it exists to avoid double slashes
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${base}${cleanPath}`;
+};
+
 // --- Components ---
 
 const WhatsAppButton = () => (
@@ -135,7 +143,7 @@ const Hero = () => (
     {/* Background Image */}
     <div className="absolute inset-0 z-0">
       <img 
-        src="/assets/hero.jpg.jpeg" 
+        src={getAssetPath('assets/hero.jpg.jpeg')} 
         alt="Interior de luxo" 
         className="w-full h-full object-cover scale-105"
         referrerPolicy="no-referrer"
@@ -365,7 +373,7 @@ const VerticalVideo = () => (
       playsInline
       className="w-full h-full object-cover"
     >
-      <source src="/assets/video-mezzo.mp4.mp4" type="video/mp4" />
+      <source src={getAssetPath('assets/video-mezzo.mp4.mp4')} type="video/mp4" />
       Seu navegador não suporta o elemento de vídeo.
     </video>
     <div className="absolute inset-0 bg-graphite/20 group-hover:bg-transparent transition-all duration-700" />
@@ -379,23 +387,23 @@ const VerticalVideo = () => (
 const Portfolio = () => {
   // Caminhos locais atualizados conforme arquivos enviados
   const patioImages = [
-    "/assets/patio-1.jpg.jpeg",
-    "/assets/patio-2.jpg.jpeg",
-    "/assets/patio-3.jpg.jpeg",
-    "/assets/patio-4.jpg.jpeg",
-    "/assets/patio-5.jpg.jpeg",
-    "/assets/patio-6.jpg.jpeg",
-    "/assets/patio-7.jpg.jpeg"
+    getAssetPath("assets/patio-1.jpg.jpeg"),
+    getAssetPath("assets/patio-2.jpg.jpeg"),
+    getAssetPath("assets/patio-3.jpg.jpeg"),
+    getAssetPath("assets/patio-4.jpg.jpeg"),
+    getAssetPath("assets/patio-5.jpg.jpeg"),
+    getAssetPath("assets/patio-6.jpg.jpeg"),
+    getAssetPath("assets/patio-7.jpg.jpeg")
   ];
 
   const alamedaImages = [
-    "/assets/alameda-1.jpg.jpeg",
-    "/assets/alameda-2.jpg.jpeg",
-    "/assets/alameda-3.jpg.jpeg",
-    "/assets/alameda-4.jpg.jpeg",
-    "/assets/alameda-5.jpg.jpeg",
-    "/assets/alameda-6.jpg.jpeg",
-    "/assets/alameda-7.jpeg"
+    getAssetPath("assets/alameda-1.jpg.jpeg"),
+    getAssetPath("assets/alameda-2.jpg.jpeg"),
+    getAssetPath("assets/alameda-3.jpg.jpeg"),
+    getAssetPath("assets/alameda-4.jpg.jpeg"),
+    getAssetPath("assets/alameda-5.jpg.jpeg"),
+    getAssetPath("assets/alameda-6.jpg.jpeg"),
+    getAssetPath("assets/alameda-7.jpeg")
   ];
 
   return (
