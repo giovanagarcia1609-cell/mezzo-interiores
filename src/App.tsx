@@ -403,7 +403,10 @@ const Portfolio = () => {
     getAssetPath("assets/alameda-4.jpg.jpeg"),
     getAssetPath("assets/alameda-5.jpg.jpeg"),
     getAssetPath("assets/alameda-6.jpg.jpeg"),
-    getAssetPath("assets/alameda-7.jpeg")
+    getAssetPath("assets/alameda-7.jpeg"),
+    getAssetPath("assets/alameda-8.jpg.jpeg"),
+    getAssetPath("assets/alameda-9.jpg.jpeg"),
+    getAssetPath("assets/alameda-10.jpg.jpeg")
   ];
 
   return (
@@ -582,7 +585,7 @@ const Location = () => (
                 </div>
                 <div className="flex-1 min-w-0">
                   <h4 className="text-xl md:text-2xl font-serif mb-2 text-white/90 tracking-wide">E-mail</h4>
-                  <p className="text-white/60 font-light tracking-wider text-sm md:text-[15px] break-all">contato@mezzointeriores.com.br</p>
+                  <p className="text-white/60 font-light tracking-wider text-sm md:text-[15px] break-all">mezzointeriores@gmail.com</p>
                 </div>
               </div>
             </div>
