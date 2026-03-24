@@ -393,7 +393,19 @@ const Portfolio = () => {
     getAssetPath("assets/patio-4.jpg.jpeg"),
     getAssetPath("assets/patio-5.jpg.jpeg"),
     getAssetPath("assets/patio-6.jpg.jpeg"),
-    getAssetPath("assets/patio-7.jpg.jpeg")
+    getAssetPath("assets/patio-7.jpg.jpeg"),
+    getAssetPath("assets/patio-8.jpg.jpeg"),
+    getAssetPath("assets/patio-9.jpg.jpeg"),
+    getAssetPath("assets/patio-10.jpg.jpeg"),
+    getAssetPath("assets/patio-11.jpg.jpeg"),
+    getAssetPath("assets/patio-12.jpg.jpeg"),
+    getAssetPath("assets/patio-13.jpg.jpeg"),
+    getAssetPath("assets/patio-14.jpg.jpeg"),
+    getAssetPath("assets/patio-15.jpg.jpeg"),
+    getAssetPath("assets/patio-16.jpg.jpeg"),
+    getAssetPath("assets/patio-17.jpg.jpeg"),
+    getAssetPath("assets/patio-18.jpg.jpeg"),
+    getAssetPath("assets/patio-19.jpg.jpeg")
   ];
 
   const alamedaImages = [
@@ -406,7 +418,14 @@ const Portfolio = () => {
     getAssetPath("assets/alameda-7.jpeg"),
     getAssetPath("assets/alameda-8.jpg.jpeg"),
     getAssetPath("assets/alameda-9.jpg.jpeg"),
-    getAssetPath("assets/alameda-10.jpg.jpeg")
+    getAssetPath("assets/alameda-10.jpg.jpeg"),
+    getAssetPath("assets/alameda-11.jpg.jpeg"),
+    getAssetPath("assets/alameda-12.jpg.jpeg"),
+    getAssetPath("assets/alameda-13.jpg.jpeg"),
+    getAssetPath("assets/alameda-14.jpg.jpeg"),
+    getAssetPath("assets/alameda-15.jpg.jpeg"),
+    getAssetPath("assets/alameda-16.jpg.jpeg"),
+    getAssetPath("assets/alameda-17.jpg.jpeg")
   ];
 
   return (
