@@ -278,7 +278,7 @@ const ProjectCarousel = ({ images, location, title }: { images: string[], locati
   const prev = useCallback(() => setIndex((prev) => (prev - 1 + images.length) % images.length), [images.length]);
 
   return (
-    <div className="mb-16 md:mb-24 last:mb-0 relative w-full">
+    <div className="mb-16 md:mb-24 last:mb-0 relative">
       <div className="relative aspect-[16/9] rounded-3xl overflow-hidden lux-shadow group touch-pan-y">
         <motion.div 
           className="w-full h-full flex cursor-grab active:cursor-grabbing"
@@ -381,7 +381,7 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" className="py-32 bg-darkbrown relative">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="container mx-auto px-6">
         <div className="max-w-2xl mb-24">
           <h2 className="text-4xl md:text-6xl font-serif mb-8 gold-text-gradient tracking-wide">Portfólio Selecionado</h2>
           <p className="text-white/60 text-lg font-light leading-relaxed tracking-wider">
@@ -389,15 +389,15 @@ const Portfolio = () => {
           </p>
         </div>
 
-        {/* Layout Flex para garantir alinhamento centralizado e fixo do vídeo */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
-          {/* Coluna do Vídeo: Largura fixa no desktop */}
-          <div className="w-full lg:w-[380px] lg:sticky lg:top-32 z-10 mb-12 lg:mb-0 flex-shrink-0">
+        {/* Retorno ao Grid Original que mantém as proporções corretas */}
+        <div className="grid lg:grid-cols-[1fr_1.8fr] gap-12 lg:gap-24 items-start">
+          {/* Coluna do Vídeo */}
+          <div className="lg:sticky lg:top-32 z-10 mb-12 lg:mb-0">
             <VerticalVideo />
           </div>
 
-          {/* Coluna das Fotos: Ocupa o restante do espaço */}
-          <div className="flex-1 space-y-20 lg:space-y-32 w-full">
+          {/* Coluna das Fotos */}
+          <div className="space-y-20 lg:space-y-32">
             <ProjectCarousel images={patioImages} location="São José do Rio Preto" title="Pátio Pitangueiras" />
             <ProjectCarousel images={alamedaImages} location="São José do Rio Preto" title="Alameda Iguatemi" />
           </div>
