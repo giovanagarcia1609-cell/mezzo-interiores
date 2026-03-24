@@ -340,8 +340,8 @@ const ProjectCarousel = ({ images, location, title }: { images: string[], locati
           <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
         </button>
 
-        {/* Dots */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        {/* Dots - hidden on mobile to avoid overflow with many photos */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex gap-2 z-10">
           {images.map((_, i) => (
             <button 
               key={i} 
@@ -365,13 +365,14 @@ const ProjectCarousel = ({ images, location, title }: { images: string[], locati
 };
 
 const VerticalVideo = () => (
-  <div className="relative aspect-[9/16] w-full rounded-3xl overflow-hidden lux-shadow group border border-white/10">
+  <div className="relative aspect-[9/16] w-full rounded-3xl overflow-hidden lux-shadow group border border-white/10 bg-graphite">
     <video 
       autoPlay 
       muted 
       loop 
       playsInline
       className="w-full h-full object-cover"
+      poster={getAssetPath('assets/hero.jpg.jpeg')}
     >
       <source src={getAssetPath('assets/video-mezzo.mp4.mp4')} type="video/mp4" />
       Seu navegador não suporta o elemento de vídeo.
@@ -385,7 +386,6 @@ const VerticalVideo = () => (
 );
 
 const Portfolio = () => {
-  // Caminhos locais atualizados conforme arquivos enviados
   const patioImages = [
     getAssetPath("assets/patio-1.jpg.jpeg"),
     getAssetPath("assets/patio-2.jpg.jpeg"),
@@ -438,14 +438,15 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-[1fr_1.8fr] gap-20 lg:gap-24 items-start">
+        {/* Grid ajustado para melhor alinhamento e centralização */}
+        <div className="grid lg:grid-cols-[0.8fr_2fr] gap-12 lg:gap-20 items-start max-w-7xl mx-auto">
           {/* Left Column: Vertical Video */}
-          <div className="lg:sticky lg:top-32 z-10 mb-12 lg:mb-0">
+          <div className="lg:sticky lg:top-32 z-10 mb-12 lg:mb-0 max-w-[320px] mx-auto lg:mx-0">
             <VerticalVideo />
           </div>
 
           {/* Right Column: Carousels */}
-          <div className="space-y-20 lg:space-y-32">
+          <div className="space-y-20 lg:space-y-32 w-full">
             <ProjectCarousel 
               images={patioImages} 
               location="São José do Rio Preto" 
@@ -464,8 +465,6 @@ const Portfolio = () => {
   );
 };
 
-
-
 const Process = () => {
   const steps = [
     { title: "Estudo & Detalhamento", desc: "Análise profunda de necessidades e criação do projeto técnico detalhado." },
@@ -478,7 +477,6 @@ const Process = () => {
 
   return (
     <section id="processo" className="py-32 bg-graphite relative overflow-hidden">
-      {/* Background decoration */}
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-darkbrown/30 to-transparent" />
       
       <div className="container mx-auto px-6 relative z-10">
@@ -552,7 +550,6 @@ const Location = () => (
   <section id="localizacao" className="py-24 md:py-32 bg-darkbrown relative overflow-hidden">
     <div className="container mx-auto px-4 md:px-6">
       <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
-        {/* Text Content Block */}
         <div className="w-full lg:order-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -564,7 +561,6 @@ const Location = () => (
             <h2 className="text-3xl md:text-6xl font-serif mb-8 md:mb-12 gold-text-gradient tracking-wide leading-tight">Onde a sofisticação se encontra.</h2>
             
             <div className="space-y-8 md:space-y-10">
-              {/* Endereço */}
               <div className="flex gap-4 md:gap-8 items-start group">
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-white/5 flex items-center justify-center text-mezzo-light flex-shrink-0 border border-white/10 group-hover:gold-gradient group-hover:text-graphite transition-all duration-500">
                   <MapPin className="w-6 h-6 md:w-7 h-7" />
@@ -586,7 +582,6 @@ const Location = () => (
                 </div>
               </div>
 
-              {/* Telefone */}
               <div className="flex gap-4 md:gap-8 items-start group">
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-white/5 flex items-center justify-center text-mezzo-light flex-shrink-0 border border-white/10 group-hover:gold-gradient group-hover:text-graphite transition-all duration-500">
                   <Phone className="w-6 h-6 md:w-7 h-7" />
@@ -597,7 +592,6 @@ const Location = () => (
                 </div>
               </div>
 
-              {/* Email */}
               <div className="flex gap-4 md:gap-8 items-start group">
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-white/5 flex items-center justify-center text-mezzo-light flex-shrink-0 border border-white/10 group-hover:gold-gradient group-hover:text-graphite transition-all duration-500">
                   <Mail className="w-6 h-6 md:w-7 h-7" />
@@ -609,7 +603,6 @@ const Location = () => (
               </div>
             </div>
 
-            {/* Social Icons */}
             <div className="mt-12 md:mt-16 flex gap-4 md:gap-6">
               <a 
                 href="https://www.instagram.com/mezzointeriores/?__d=1%3F%2F" 
@@ -633,7 +626,6 @@ const Location = () => (
           </motion.div>
         </div>
 
-        {/* Map Block */}
         <div className="w-full lg:order-1">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -644,7 +636,6 @@ const Location = () => (
           >
             <div className="absolute inset-0 border-2 border-transparent group-hover:border-mezzo/20 transition-all duration-1000 pointer-events-none rounded-[32px] md:rounded-[40px] z-10" />
             
-            {/* Map Link Overlay */}
             <div className="absolute bottom-6 right-6 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               <a 
                 href="https://www.google.com/maps/search/?api=1&query=Plaza+Avenida+Shopping+Av.+Jos%C3%A9+Munia+4775+S%C3%A3o+Jos%C3%A9+do+Rio+Preto"
