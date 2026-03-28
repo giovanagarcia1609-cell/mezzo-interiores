@@ -215,7 +215,7 @@ const Services = () => {
   const services = [
     {
       title: "Marcenaria de Alto Padrão",
-      description: "Nossa prioridade máxima. Execução impecável em parceria com a Madeira Divina, garantindo o controle absoluto do design à montagem.",
+      description: "Nossa prioridade máxima. Execução impecável com marcenaria própria de alto padrão, garantindo o controle absoluto do design à montagem.",
       icon: Hammer,
       highlight: true
     },
@@ -477,7 +477,7 @@ const Process = () => {
     { title: "Estudo & Detalhamento", desc: "Análise profunda de necessidades e criação do projeto técnico detalhado." },
     { title: "Medição Técnica", desc: "Verificação milimétrica na obra para garantir o ajuste perfeito da marcenaria." },
     { title: "Validação & Assinatura", desc: "Apresentação completa e validação final com o cliente antes da execução." },
-    { title: "Planos de Corte", desc: "Geração de documentação técnica precisa para a execução na Madeira Divina." },
+    { title: "Planos de Corte", desc: "Geração de documentação técnica precisa para a execução em nossa marcenaria própria." },
     { title: "Acompanhamento Técnico", desc: "Supervisão de elétrica, hidráulica e acabamentos em sintonia com o projeto." },
     { title: "Gestão Semanal", desc: "Acompanhamento presencial e relatórios semanais para sua total tranquilidade." }
   ];
@@ -665,7 +665,7 @@ const FAQ = () => {
     },
     {
       q: "A marcenaria é personalizada?",
-      a: "Totalmente. Nossa marcenaria é de alto padrão e executada em parceria estratégica com a Madeira Divina. Isso nos permite criar peças exclusivas com acabamento impecável e precisão industrial."
+      a: "Totalmente. Nossa marcenaria é de alto padrão e executada com tecnologia de ponta e precisão industrial. Isso nos permite criar peças exclusivas com acabamento impecável."
     }
   ];
 
