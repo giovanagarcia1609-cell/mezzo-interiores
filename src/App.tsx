@@ -255,7 +255,7 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
               className={cn(
-                "p-8 md:p-12 rounded-3xl transition-all duration-700 group relative overflow-hidden",
+                "p-8 md:p-12 rounded-3xl transition-all duration-700 group relative overflow-hidden flex flex-col h-full",
                 service.highlight 
                   ? "bg-darkbrown border border-mezzo/20 shadow-2xl md:scale-105 z-10" 
                   : "bg-white/5 hover:bg-white/10 border border-white/5 hover:border-mezzo/20"
@@ -277,7 +277,7 @@ const Services = () => {
               <a 
                 href="https://wa.me/5517996050210?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20projeto%20da%20Mezzo%20Interiores.%20"
                 className={cn(
-                  "inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.35em] font-bold group/btn",
+                  "inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.35em] font-bold group/btn mt-auto",
                   service.highlight ? "text-mezzo-light" : "text-mezzo hover:text-mezzo-light transition-colors"
                 )}
               >
